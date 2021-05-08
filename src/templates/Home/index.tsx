@@ -37,44 +37,56 @@ const Home = ({
   <section>
     <Container>
       <Menu />
-      <BannerSlider items={banners} />
+      <S.SectionBanner>
+        <BannerSlider items={banners} />
+      </S.SectionBanner>
     </Container>
 
-    <Container>
-      <Heading color="black" lineLeft lineColor="secondary">
-        News
-      </Heading>
-      <GameCardSlider items={newGames} />
-    </Container>
+    <S.SectionNews>
+      <Container>
+        <Heading color="black" lineLeft lineColor="secondary">
+          News
+        </Heading>
+        <GameCardSlider items={newGames} />
+      </Container>
+    </S.SectionNews>
 
     <Container>
-      <Heading lineLeft lineColor="secondary">
-        Most Popular
-      </Heading>
-      <Highlight {...mostPopularHighlight} />
-      <GameCardSlider items={mostPopularGames} color="white" />
+      <S.SectionMostPopular>
+        <Heading lineLeft lineColor="secondary">
+          Most Popular
+        </Heading>
+        <Highlight {...mostPopularHighlight} />
+        <GameCardSlider items={mostPopularGames} color="white" />
+      </S.SectionMostPopular>
     </Container>
 
-    <Container>
-      <Heading lineLeft lineColor="secondary">
-        Upcomming
-      </Heading>
-      <GameCardSlider items={upcommingGames} color="white" />
-      <Highlight {...upcommingHighlight} />
-      <GameCardSlider items={upcommingMoreGames} color="white" />
-    </Container>
+    <S.SectionUpcoming>
+      <Container>
+        <Heading lineLeft lineColor="secondary">
+          Upcomming
+        </Heading>
+        <GameCardSlider items={upcommingGames} color="white" />
+        <Highlight {...upcommingHighlight} />
+        <GameCardSlider items={upcommingMoreGames} color="white" />
+      </Container>
+    </S.SectionUpcoming>
 
-    <Container>
-      <Heading lineLeft lineColor="secondary">
-        Free Games
-      </Heading>
-      <Highlight {...freeHightlight} />
-      <GameCardSlider items={freeGames} />
-    </Container>
+    <S.SectionFreeGames>
+      <Container>
+        <Heading lineLeft lineColor="secondary">
+          Free Games
+        </Heading>
+        <Highlight {...freeHightlight} />
+        <GameCardSlider items={freeGames} />
+      </Container>
+    </S.SectionFreeGames>
 
-    <Container>
-      <Footer />
-    </Container>
+    <S.SectionFooter>
+      <Container>
+        <Footer />
+      </Container>
+    </S.SectionFooter>
   </section>
 )
 
